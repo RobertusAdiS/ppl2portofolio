@@ -1,0 +1,1025 @@
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Portofolio PPG Informatika - Robertus Adi Setyawan, S.Pd.</title>
+    <meta
+      name="description"
+      content="E-Portofolio PPG Prajabatan Informatika UNY di SMA Negeri 3 Yogyakarta oleh Robertus Adi Setyawan, S.Pd. Menampilkan artifak pembelajaran, analisis TPACK/PjBL, dan refleksi kritis."
+    />
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- FontAwesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              navy: {
+                50: "#f0f4f8",
+                100: "#d9e2ec",
+                800: "#102a43",
+                900: "#0b69a3",
+                950: "#061b2e",
+              },
+              emerald: {
+                500: "#10b981",
+                600: "#059669",
+              },
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              heading: ["Plus Jakarta Sans", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .glass-card {
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(226, 232, 240, 0.8);
+      }
+      .gradient-text {
+        background: linear-gradient(135deg, #0b69a3 0%, #059669 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-sky-500 selection:text-white"
+  >
+    <!-- HEADER / NAVIGATION BAR -->
+    <header
+      class="sticky top-0 z-40 w-full glass-card border-b border-slate-200/80 transition-all duration-300"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-20 items-center">
+          <!-- Brand Logo & Title -->
+          <div class="flex items-center gap-3">
+            <div
+              class="w-11 h-11 rounded-xl bg-gradient-to-tr from-sky-600 to-emerald-500 flex items-center justify-center text-white shadow-md shadow-sky-500/20 font-bold text-xl"
+            >
+              RA
+            </div>
+            <div>
+              <a
+                href="#beranda"
+                class="text-lg font-heading font-extrabold text-slate-900 tracking-tight block"
+              >
+                E-Portofolio <span class="text-sky-600">PPG</span>
+              </a>
+              <p class="text-xs text-slate-500 font-medium hidden sm:block">
+                Informatika • SMA N 3 Yogyakarta
+              </p>
+            </div>
+          </div>
+
+          <!-- Desktop Navigation Links -->
+          <nav class="hidden lg:flex items-center gap-1 xl:gap-2">
+            <a
+              href="#beranda"
+              class="px-3 py-2 text-sm font-semibold text-slate-700 hover:text-sky-600 rounded-lg hover:bg-slate-100/80 transition-colors"
+              >Beranda</a
+            >
+            <a
+              href="#artifak"
+              class="px-3 py-2 text-sm font-semibold text-slate-700 hover:text-sky-600 rounded-lg hover:bg-slate-100/80 transition-colors"
+              >Artifak Mengajar</a
+            >
+            <a
+              href="#analisis"
+              class="px-3 py-2 text-sm font-semibold text-slate-700 hover:text-sky-600 rounded-lg hover:bg-slate-100/80 transition-colors"
+              >Analisis</a
+            >
+            <a
+              href="#refleksi"
+              class="px-3 py-2 text-sm font-semibold text-slate-700 hover:text-sky-600 rounded-lg hover:bg-slate-100/80 transition-colors"
+              >Refleksi Kritis</a
+            >
+            <a
+              href="#rtl"
+              class="px-3 py-2 text-sm font-semibold text-slate-700 hover:text-sky-600 rounded-lg hover:bg-slate-100/80 transition-colors"
+              >RTL</a
+            >
+          </nav>
+
+          <!-- Status Badge & Mobile Toggle -->
+          <div class="flex items-center gap-3">
+            <span
+              class="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200"
+            >
+              <span
+                class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"
+              ></span>
+              PPG Calon Guru Gelombang 1
+            </span>
+
+            <!-- Mobile Menu Button -->
+            <button
+              id="mobile-menu-btn"
+              type="button"
+              class="lg:hidden p-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 focus:outline-none"
+              aria-label="Toggle Menu"
+            >
+              <i class="fa-solid fa-bars text-xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Navigation Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden lg:hidden border-t border-slate-200 bg-white/95 backdrop-blur-md px-4 pt-2 pb-4 space-y-1 shadow-lg"
+      >
+        <a
+          href="#beranda"
+          class="mobile-link block px-3 py-2.5 rounded-md text-base font-medium text-slate-700 hover:bg-sky-50 hover:text-sky-600"
+          >Beranda</a
+        >
+        <a
+          href="#artifak"
+          class="mobile-link block px-3 py-2.5 rounded-md text-base font-medium text-slate-700 hover:bg-sky-50 hover:text-sky-600"
+          >Artifak Mengajar</a
+        >
+        <a
+          href="#analisis"
+          class="mobile-link block px-3 py-2.5 rounded-md text-base font-medium text-slate-700 hover:bg-sky-50 hover:text-sky-600"
+          >Analisis</a
+        >
+        <a
+          href="#refleksi"
+          class="mobile-link block px-3 py-2.5 rounded-md text-base font-medium text-slate-700 hover:bg-sky-50 hover:text-sky-600"
+          >Refleksi Kritis</a
+        >
+        <a
+          href="#rtl"
+          class="mobile-link block px-3 py-2.5 rounded-md text-base font-medium text-slate-700 hover:bg-sky-50 hover:text-sky-600"
+          >Rencana Tindak Lanjut</a
+        >
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="space-y-20 py-8">
+      <!-- 1. HEROBANNER & BERANDA SECTION (20 Points Alignment) -->
+      <section id="beranda" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <!-- Left Bio Column -->
+          <div class="lg:col-span-7 space-y-6">
+            <div
+              class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-sky-50 border border-sky-200 text-sky-700 text-xs font-bold tracking-wide uppercase"
+            >
+              <i class="fa-solid fa-graduation-cap"></i> Portofolio PPL Mandiri
+            </div>
+
+            <h1
+              class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-slate-900 leading-tight"
+            >
+              Transformasi Pembelajaran
+              <span class="gradient-text">Informatika Berbasis TPACK</span> &
+              Computational Thinking
+            </h1>
+
+            <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+              Selamat datang di E-Portofolio Pembelajaran Mandiri (PPL) PPG
+              Prajabatan Informatika Universitas Negeri Yogyakarta. Portofolio
+              ini memuat dokumentasi komprehensif rancangan, pelaksanaan,
+              analisis artifak, dan refleksi kritis pembelajaran di
+              <strong class="text-slate-800"
+                >SMA Negeri 3 Yogyakarta (Padmanaba)</strong
+              >.
+            </p>
+
+            <!-- Instructor Info Card Badge -->
+            <div
+              class="p-4 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-wrap items-center gap-4"
+            >
+              <div
+                class="w-14 h-14 rounded-full bg-slate-100 border-2 border-sky-500 overflow-hidden flex-shrink-0 flex items-center justify-center text-slate-400"
+              >
+                <i class="fa-solid fa-user-tie text-2xl text-sky-700"></i>
+              </div>
+              <div>
+                <h2 class="text-lg font-bold text-slate-900">
+                  Robertus Adi Setyawan, S.Pd.
+                </h2>
+                <p class="text-xs text-slate-500 font-medium">
+                  Mahasiswa PPG Prajabatan Informatika • UNY 2025/2026
+                </p>
+                <p class="text-xs text-emerald-600 font-semibold mt-0.5">
+                  <i class="fa-solid fa-school text-xs mr-1"></i>
+                  LPTK: UNY
+                </p>
+              </div>
+            </div>
+
+            <!-- Contact & External Links -->
+            <div class="flex flex-wrap items-center gap-3 pt-2">
+              <a
+                href="mailto:robertusadisetyawan@gmail.com"
+                class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 text-white font-medium text-sm hover:bg-sky-700 transition-colors shadow-md"
+              >
+                <i class="fa-solid fa-envelope"></i> Email
+              </a>
+              <a
+                href="https://github.com/RobertusAdiS/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white border border-slate-300 text-slate-700 font-medium text-sm hover:bg-slate-50 transition-colors"
+              >
+                <i class="fa-brands fa-github text-lg"></i> GitHub
+              </a>
+            </div>
+          </div>
+
+          <!-- Right Interactive Metrics Card -->
+          <div class="lg:col-span-5">
+            <div
+              class="rounded-3xl bg-slate-900 text-white p-6 sm:p-8 shadow-2xl relative overflow-hidden border border-slate-800"
+            >
+              <div
+                class="absolute -right-10 -bottom-10 w-40 h-40 bg-sky-500/10 rounded-full blur-3xl pointer-events-none"
+              ></div>
+
+              <div class="flex justify-between items-center mb-6">
+                <span
+                  class="text-xs font-bold uppercase tracking-wider text-sky-400"
+                  >Ringkasan Kinerja PPL</span
+                >
+                <span
+                  class="px-2.5 py-1 rounded-full bg-sky-500/20 text-sky-300 text-xs font-medium"
+                  >Deep Learning</span
+                >
+              </div>
+
+              <!-- Grid Stats -->
+              <div class="grid grid-cols-2 gap-4">
+                <div
+                  class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700"
+                >
+                  <div
+                    class="text-3xl font-extrabold text-sky-400 font-heading"
+                  >
+                    4 Siklus
+                  </div>
+                  <div class="text-xs text-slate-400 font-medium mt-1">
+                    Siklus PPL Mandiri Dilaksanakan
+                  </div>
+                </div>
+                <div
+                  class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700"
+                >
+                  <div
+                    class="text-3xl font-extrabold text-emerald-400 font-heading"
+                  >
+                    36+ Siswa
+                  </div>
+                  <div class="text-xs text-slate-400 font-medium mt-1">
+                    Kelas X SMA N 3 Yogyakarta
+                  </div>
+                </div>
+                <div
+                  class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700"
+                >
+                  <div
+                    class="text-3xl font-extrabold text-amber-400 font-heading"
+                  >
+                    100%
+                  </div>
+                  <div class="text-xs text-slate-400 font-medium mt-1">
+                    Model PjBL & TPACK Integrasi
+                  </div>
+                </div>
+                <div
+                  class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700"
+                >
+                  <div
+                    class="text-3xl font-extrabold text-purple-400 font-heading"
+                  >
+                    8+ Artifak
+                  </div>
+                  <div class="text-xs text-slate-400 font-medium mt-1">
+                    Modul, LKPD, Rubrik & Video
+                  </div>
+                </div>
+              </div>
+
+              <!-- Core Focus Area -->
+              <div class="mt-6 pt-6 border-t border-slate-800">
+                <p class="text-xs text-slate-400 mb-2 font-semibold uppercase">
+                  Fokus Otomasi Perkantoran (Office Automation):
+                </p>
+                <div class="flex flex-wrap gap-1.5 text-xs">
+                  <span
+                    class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 border border-slate-700"
+                    >VLOOKUP / HLOOKUP</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 border border-slate-700"
+                    >Nested IF & Logical</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 border border-slate-700"
+                    >Mail Merge Word</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 border border-slate-700"
+                    >Automated TOC</span
+                  >
+                  <span
+                    class="px-2.5 py-1 rounded-md bg-slate-800 text-slate-300 border border-slate-700"
+                    >Data Visualisation</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. ARTIFAK PEMBELAJARAN / BUKTI MENGAJAR (20 Points Alignment) -->
+      <section
+        id="artifak"
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12"
+      >
+        <div
+          class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4"
+        >
+          <div>
+            <div
+              class="inline-flex items-center gap-2 text-sky-600 font-bold text-xs uppercase tracking-wider mb-2"
+            >
+              <i class="fa-solid fa-folder-open"></i> Dokumentasi PPL Mandiri
+            </div>
+            <h2
+              class="text-2xl sm:text-3xl font-heading font-extrabold text-slate-900"
+            >
+              Artifak Mengajar
+            </h2>
+            <p class="text-slate-600 text-sm mt-1 max-w-2xl">
+              Kumpulan perangkat pembelajaran, media pembelajaran, instrumen
+              asesmen, dan rekaman video pelaksanaan PPL materi Otomasi
+              Perkantoran
+            </p>
+          </div>
+        </div>
+
+        <!-- Artifacts Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Shared RPP Artifact: Visible in every cycle filter -->
+          <div
+            class="glass-card rounded-2xl p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between border border-slate-200"
+          >
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span
+                  class="px-2.5 py-1 rounded-md bg-amber-100 text-amber-800 text-xs font-bold"
+                  >Modul Ajar / RPP</span
+                >
+                <span class="text-xs font-semibold text-slate-400"
+                  >Semua Siklus</span
+                >
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 mb-2">
+                RPP Deep Learning
+              </h3>
+              <div
+                class="text-xs text-slate-600 leading-relaxed space-y-2 mb-6"
+              >
+                <p>
+                  <strong>Konteks:</strong> RPP Deep Learning menjadi acuan
+                  perencanaan pembelajaran PPL pada Siklus 1–4.
+                </p>
+                <p>
+                  <strong>Tujuan:</strong> Menyelaraskan tujuan pembelajaran,
+                  aktivitas, dan asesmen dalam satu alur pembelajaran.
+                </p>
+                <p>
+                  <strong>Kelebihan:</strong> Memberi arah pelaksanaan yang
+                  terstruktur dan membantu menjaga keterkaitan antara kegiatan
+                  belajar dan hasil yang diharapkan.
+                </p>
+                <p>
+                  <strong>Kekurangan:</strong> Rencana tertulis tetap perlu
+                  disesuaikan dengan kebutuhan siswa, waktu, dan kondisi kelas
+                  saat pelaksanaan.
+                </p>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-slate-100 flex gap-2">
+              <a
+                href="https://drive.google.com/file/d/1g2G6TRXZrg57myA3vKjPE0emFdtUog3V/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex-1 py-2 px-3 rounded-xl bg-amber-600 text-white text-xs font-semibold text-center hover:bg-amber-700 transition-colors"
+              >
+                <i class="fa-solid fa-file-lines mr-1"></i> Lihat RPP Deep
+                Learning
+              </a>
+            </div>
+          </div>
+
+          <!-- Artifact Item: Media Pembelajaran -->
+          <div
+            class="glass-card rounded-2xl p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between border border-slate-200"
+          >
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span
+                  class="px-2.5 py-1 rounded-md bg-emerald-100 text-emerald-800 text-xs font-bold"
+                  >Media Pembelajaran</span
+                >
+                <span class="text-xs font-semibold text-slate-400"
+                  >Siklus 1–4</span
+                >
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 mb-2">
+                Media Pembelajaran Canva
+              </h3>
+              <div
+                class="text-xs text-slate-600 leading-relaxed space-y-2 mb-6"
+              >
+                <p>
+                  <strong>Konteks:</strong> Media Canva disiapkan untuk
+                  mendukung penyampaian materi dalam pembelajaran Siklus 1–4.
+                </p>
+                <p>
+                  <strong>Tujuan:</strong> Membantu menjelaskan materi secara
+                  visual dan memberi siswa bahan belajar yang dapat diakses
+                  melalui tautan.
+                </p>
+                <p>
+                  <strong>Kelebihan:</strong> Format visual dapat menarik
+                  perhatian dan memudahkan penyajian informasi secara ringkas.
+                </p>
+                <p>
+                  <strong>Kekurangan:</strong> Akses bergantung pada perangkat
+                  dan koneksi internet; media perlu dipadukan dengan penjelasan
+                  serta aktivitas belajar.
+                </p>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-slate-100 grid grid-cols-2 gap-2">
+              <a
+                href="https://canva.link/9s2hncwz9rc3owk"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="py-2 px-3 rounded-xl bg-emerald-600 text-white text-xs font-semibold text-center hover:bg-emerald-700 transition-colors"
+              >
+                <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i>
+                Media 1
+              </a>
+              <a
+                href="https://canva.link/xi0hld6q91wa5rg"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="py-2 px-3 rounded-xl bg-emerald-600 text-white text-xs font-semibold text-center hover:bg-emerald-700 transition-colors"
+              >
+                <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i>
+                Media 2
+              </a>
+              <a
+                href="https://canva.link/gsfvwp70ez1uv6y"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="py-2 px-3 rounded-xl bg-emerald-600 text-white text-xs font-semibold text-center hover:bg-emerald-700 transition-colors"
+              >
+                <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i>
+                Media 3
+              </a>
+              <a
+                href="https://canva.link/xo55lfwof5q3wyx"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="py-2 px-3 rounded-xl bg-emerald-600 text-white text-xs font-semibold text-center hover:bg-emerald-700 transition-colors"
+              >
+                <i class="fa-solid fa-arrow-up-right-from-square mr-1"></i>
+                Media 4
+              </a>
+            </div>
+          </div>
+
+          <!-- Artifact Item 3: Visualisasi Data & Dashboard Presentation -->
+          <div
+            class="glass-card rounded-2xl p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between border border-slate-200"
+          >
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span
+                  class="px-2.5 py-1 rounded-md bg-purple-100 text-purple-800 text-xs font-bold"
+                  >Asesmen & Proyek</span
+                >
+                <span class="text-xs font-semibold text-slate-400"
+                  >Siklus 4 • Fase E</span
+                >
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 mb-2">
+                Instrumen Asesmen
+              </h3>
+              <div
+                class="text-xs text-slate-600 leading-relaxed space-y-2 mb-6"
+              >
+                <p>
+                  <strong>Konteks:</strong> Instrumen digunakan untuk menilai
+                  keterampilan mengolah data menjadi visualisasi dan
+                  menyajikannya.
+                </p>
+                <p>
+                  <strong>Tujuan:</strong> Menilai proses dan hasil kerja siswa
+                  dengan kriteria analitik, termasuk refleksi diri dan umpan
+                  balik teman.
+                </p>
+                <p>
+                  <strong>Kelebihan:</strong> Kriteria yang jelas membantu
+                  membuat penilaian lebih transparan dan memberi arah perbaikan.
+                </p>
+                <p>
+                  <strong>Kekurangan:</strong> Penerapan rubrik dan penilaian
+                  teman tetap memerlukan kalibrasi serta pendampingan agar
+                  penilaian konsisten.
+                </p>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-slate-100 flex gap-2">
+              <a
+                href="https://docs.google.com/spreadsheets/d/1txdmM4u2PHj8Cgw5cMpDR8xI8uIpHrq1z5qCMkEA6tQ/edit?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex-1 py-2 px-3 rounded-xl bg-sky-600 text-white text-xs font-semibold text-center hover:bg-sky-700 transition-colors"
+              >
+                <i class="fa-solid fa-file-spreadsheet mr-1"></i> Lihat
+                Instrumen Analitik
+              </a>
+            </div>
+          </div>
+
+          <!-- Artifact Item: Video Pembelajaran PPL -->
+          <div
+            class="glass-card rounded-2xl p-6 shadow-sm hover:shadow-md transition-all flex flex-col justify-between border border-slate-200"
+          >
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <span
+                  class="px-2.5 py-1 rounded-md bg-amber-100 text-amber-800 text-xs font-bold"
+                  >Video Mengajar</span
+                >
+                <span class="text-xs font-semibold text-slate-400"
+                  >Siklus 2</span
+                >
+              </div>
+              <h3 class="text-lg font-bold text-slate-900 mb-2">
+                Rekaman Pelaksanaan Pembelajaran (PPL)
+              </h3>
+              <div
+                class="text-xs text-slate-600 leading-relaxed space-y-2 mb-6"
+              >
+                <p>
+                  <strong>Konteks:</strong> Rekaman mendokumentasikan
+                  pelaksanaan pembelajaran PPL Mandiri di kelas X SMA Negeri 3
+                  Yogyakarta.
+                </p>
+                <p>
+                  <strong>Tujuan:</strong> Menjadi bukti pelaksanaan sekaligus
+                  bahan refleksi terhadap strategi mengajar dan keterlibatan
+                  siswa.
+                </p>
+                <p>
+                  <strong>Kelebihan:</strong> Rekaman memungkinkan kegiatan
+                  pembelajaran ditinjau kembali untuk mengenali praktik yang
+                  efektif dan yang perlu ditingkatkan.
+                </p>
+                <p>
+                  <strong>Kekurangan:</strong> Video hanya merekam satu
+                  pelaksanaan dan sudut pandang kamera mungkin tidak menangkap
+                  seluruh interaksi kelas.
+                </p>
+              </div>
+            </div>
+            <div class="pt-4 border-t border-slate-100 flex gap-2">
+              <button
+                onclick="openModal('video-ppl')"
+                class="flex-1 py-2 px-3 rounded-xl bg-amber-600 text-white text-xs font-semibold text-center hover:bg-amber-700 transition-colors"
+              >
+                <i class="fa-solid fa-circle-play mr-1"></i> Tonton Video PPL
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. ANALISIS ARTIFAK & KERANGKA PEDAGOGI (20 Points Alignment) -->
+      <section
+        id="analisis"
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12"
+      >
+        <div
+          class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200 shadow-sm"
+        >
+          <div class="max-w-3xl mb-8">
+            <div
+              class="inline-flex items-center gap-2 text-emerald-600 font-bold text-xs uppercase tracking-wider mb-2"
+            >
+              <i class="fa-solid fa-chart-line"></i> Evaluasi & Kajian Pedagogis
+            </div>
+            <h2
+              class="text-2xl sm:text-3xl font-heading font-extrabold text-slate-900"
+            >
+              Analisis Contextual Artifak (TPACK & PjBL)
+            </h2>
+            <p class="text-slate-600 text-sm mt-2">
+              Analisis hubungan antara perencanaan, media, asesmen, dan
+              pelaksanaan pembelajaran Informatika dalam PPL di SMA Negeri 3
+              Yogyakarta.
+            </p>
+          </div>
+
+          <!-- Analysis Grid Cards -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+            <!-- Context & Pedagogical Framework -->
+            <div class="space-y-4">
+              <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200">
+                <h3
+                  class="font-bold text-slate-900 text-base mb-2 flex items-center gap-2"
+                >
+                  <i class="fa-solid fa-microchip text-sky-600"></i> Analisis
+                  Artifak dengan Kerangka TPACK
+                </h3>
+                <p class="text-xs text-slate-600 leading-relaxed">
+                  <strong class="text-slate-800"
+                    >TK (Technological Knowledge):</strong
+                  >
+                  Media Canva membantu menyajikan materi secara visual,
+                  sedangkan spreadsheet mendukung pengolahan dan penilaian
+                  data.<br />
+                  <strong class="text-slate-800"
+                    >PK (Pedagogical Knowledge):</strong
+                  >
+                  RPP Deep Learning menjadi acuan alur belajar; kegiatan
+                  diarahkan agar siswa memahami, menerapkan, dan merefleksikan
+                  pembelajaran secara aktif.<br />
+                  <strong class="text-slate-800"
+                    >CK (Content Knowledge):</strong
+                  >
+                  Materi Informatika mencakup pengolahan data, visualisasi,
+                  serta penggunaan perangkat digital secara kontekstual.
+                  Kesesuaian ketiganya tampak pada dukungan teknologi dan
+                  asesmen terhadap tujuan belajar.
+                </p>
+              </div>
+
+              <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200">
+                <h3
+                  class="font-bold text-slate-900 text-base mb-2 flex items-center gap-2"
+                >
+                  <i
+                    class="fa-solid fa-triangle-exclamation text-amber-600"
+                  ></i>
+                  Tantangan Implementasi & Solusi
+                </h3>
+                <div class="space-y-2 text-xs text-slate-600">
+                  <p>
+                    <strong class="text-slate-800">Tantangan:</strong>
+                    Ketersediaan perangkat dan koneksi internet dapat berbeda,
+                    sementara siswa juga memiliki tingkat pemahaman awal yang
+                    beragam.
+                  </p>
+                  <p>
+                    <strong class="text-slate-800"
+                      >Strategi Tindak Lanjut:</strong
+                    >
+                    Sediakan instruksi bertahap, contoh kerja, dan pendampingan
+                    atau tutor sebaya. Siapkan alternatif bahan saat koneksi
+                    terbatas, lalu sesuaikan dukungan berdasarkan asesmen
+                    formatif.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Evidence, limitations, and follow-up -->
+            <div
+              class="p-6 rounded-2xl bg-slate-900 text-white flex flex-col justify-between"
+            >
+              <div>
+                <div class="flex justify-between items-center mb-4">
+                  <h3 class="font-bold text-base text-white">
+                    Evaluasi dan Tindak Lanjut
+                  </h3>
+                </div>
+                <p class="text-xs text-slate-300 leading-relaxed mb-6">
+                  Keempat artifak saling melengkapi: RPP menjadi rancangan,
+                  media Canva membantu penyajian materi, instrumen analitik
+                  mendukung penilaian, dan video menjadi bahan dokumentasi serta
+                  refleksi pelaksanaan.
+                </p>
+
+                <div class="space-y-4 text-xs text-slate-300 leading-relaxed">
+                  <p>
+                    <strong class="text-white">Kekuatan:</strong> Alur
+                    pembelajaran, sumber belajar, dan penilaian terdokumentasi
+                    sehingga pelaksanaan dapat direncanakan dan ditinjau
+                    kembali.
+                  </p>
+                  <p>
+                    <strong class="text-white">Catatan kritis:</strong> Media
+                    digital tidak otomatis menjamin pemahaman. Keberhasilan
+                    perlu dilihat dari keterlibatan siswa, kualitas proses dan
+                    produk, serta hasil asesmen.
+                  </p>
+                  <p>
+                    <strong class="text-white">Tindak lanjut:</strong> Gunakan
+                    hasil instrumen dan refleksi video untuk mengidentifikasi
+                    miskonsepsi, memberi umpan balik spesifik, dan memperbaiki
+                    kegiatan pembelajaran berikutnya.
+                  </p>
+                </div>
+              </div>
+
+              <div
+                class="mt-6 pt-4 border-t border-slate-800 text-xs text-slate-400"
+              >
+                <i class="fa-solid fa-circle-info text-sky-400 mr-1"></i>
+                Analisis kualitatif berdasarkan artifak yang ditampilkan;
+                capaian kuantitatif perlu dilengkapi data asesmen aktual.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. REFLEKSI KRITIS & FILOSOFI MENGAJAR (20 Points Alignment) -->
+      <section
+        id="refleksi"
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12"
+      >
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          <!-- Left Narrative Column -->
+          <div class="lg:col-span-7 space-y-6">
+            <div>
+              <div
+                class="inline-flex items-center gap-2 text-purple-600 font-bold text-xs uppercase tracking-wider mb-2"
+              >
+                <i class="fa-solid fa-brain"></i> Model ALACT / Refleksi Gibbs
+              </div>
+              <h2
+                class="text-2xl sm:text-3xl font-heading font-extrabold text-slate-900"
+              >
+                Refleksi Kritis & Filosofi Pendidikan
+              </h2>
+            </div>
+
+            <!-- Quote Block -->
+            <blockquote
+              class="p-4 border-l-4 border-sky-600 bg-sky-50/50 rounded-r-xl text-xs sm:text-sm text-slate-700 italic"
+            >
+              "Ing Ngarsa Sung Tuladha, Ing Madya Mangun Karsa, Tut Wuri
+              Handayani. Mengajar Informatika di era AI bukan sekadar
+              mentransfer sintaks, melainkan menuntun nalar komputasional siswa
+              agar bijak dan inovatif."
+            </blockquote>
+
+            <!-- Reflection Body Text -->
+            <div
+              class="prose prose-slate text-xs sm:text-sm text-slate-600 leading-relaxed space-y-4"
+            >
+              <p>
+                <strong>1. Pengalaman Utama (Action):</strong> Selama PPL
+                Mandiri di SMA Negeri 3 Yogyakarta, saya menyadari bahwa siswa
+                Padmanaba memiliki keaktifan dan pemikiran kritis yang sangat
+                tinggi. Tantangan terbesar bukan pada pemahaman dasar komputer,
+                melainkan menyajikan masalah nyata yang menantang kreativitas
+                mereka.
+              </p>
+              <p>
+                <strong>2. Evaluasi Diri (Looking Back):</strong> Keberhasilan
+                utama terletak pada integrasi model Project-Based Learning yang
+                mengoneksikan materi spreadsheets dengan kebutuhan siswa. Hal
+                ini meningkatkan relevansi materi hingga 100%.
+              </p>
+              <p>
+                <strong>3. Analisis Kritis (Alternative Options):</strong>
+                Namun, saya mengidentifikasi kelemahan pada manajemen waktu saat
+                fase uji produk kelompok. Diskusi sering memanjang karena
+                tingginya antusiasme argumentasi teknis antar-siswa.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Strength & Weakness Matrix -->
+          <div class="lg:col-span-5 space-y-4">
+            <div
+              class="p-6 rounded-3xl bg-white border border-slate-200 shadow-sm"
+            >
+              <h3
+                class="text-base font-bold text-slate-900 mb-4 flex items-center gap-2"
+              >
+                <i class="fa-solid fa-sliders text-sky-600"></i> Matriks
+                Evaluasi Diri Guru
+              </h3>
+
+              <!-- Kekuatan -->
+              <div class="mb-4">
+                <h4
+                  class="text-xs font-bold text-emerald-700 uppercase tracking-wider mb-2 flex items-center gap-1"
+                >
+                  <i class="fa-solid fa-circle-plus"></i> Kekuatan (Strengths)
+                </h4>
+                <ul class="text-xs text-slate-600 space-y-1.5 pl-2">
+                  <li>• Penguasaan materi konten teknologi (CK) yang solid.</li>
+                  <li>
+                    • Mampu merancang media visual interaktif dan komunikatif.
+                  </li>
+                  <li>
+                    • Pendekatan persuasif dan ramah terhadap peserta didik.
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Kelemahan / Area Pengembangan -->
+              <div>
+                <h4
+                  class="text-xs font-bold text-amber-700 uppercase tracking-wider mb-2 flex items-center gap-1"
+                >
+                  <i class="fa-solid fa-circle-minus"></i> Area Pengembangan
+                  (Growth Area)
+                </h4>
+                <ul class="text-xs text-slate-600 space-y-1.5 pl-2">
+                  <li>
+                    • Pengelolaan alokasi waktu pada fase presentasi PjBL.
+                  </li>
+                  <li>
+                    • Variasi diferensiasi proses bagi siswa dengan kognitif
+                    super tajam.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-slate-200 py-8">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500"
+      >
+        <div>
+          <p class="font-semibold text-slate-700">
+            © 2026 Robertus Adi Setyawan, S.Pd.
+          </p>
+          <p>
+            E-Portofolio PPG Prajabatan Informatika • LPTK Universitas Negeri
+            Yogyakarta
+          </p>
+        </div>
+        <div class="flex items-center gap-4">
+          <a
+            href="https://github.com/RobertusAdiS/e-portofolio"
+            target="_blank"
+            class="hover:text-sky-600 transition-colors"
+            ><i class="fa-brands fa-github text-base"></i
+          ></a>
+          <a
+            href="mailto:robertusadi.sp@gmail.com"
+            class="hover:text-sky-600 transition-colors"
+            ><i class="fa-solid fa-envelope text-base"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- INTERACTIVE MODALS FOR ARTIFACT PREVIEWS -->
+    <div
+      id="modal-backdrop"
+      class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4"
+    >
+      <div
+        class="bg-white rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto p-6 sm:p-8 shadow-2xl relative border border-slate-200"
+      >
+        <!-- Close Button -->
+        <button
+          onclick="closeModal()"
+          class="absolute top-5 right-5 w-8 h-8 rounded-full bg-slate-100 text-slate-500 hover:text-slate-900 flex items-center justify-center font-bold"
+        >
+          ✕
+        </button>
+
+        <!-- Dynamic Modal Content Area -->
+        <div id="modal-content">
+          <!-- Javascript will inject content here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- JAVASCRIPT CONTROLLERS -->
+    <script>
+      // Mobile Navigation Toggle
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const mobileLinks = document.querySelectorAll(".mobile-link");
+
+      mobileMenuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+        });
+      });
+
+      // Modal Content Data Store
+      const modalDetails = {
+        "modul-excel": {
+          title: "RPP TIK Pertemuan 1: Otomasi Lanjutan Excel",
+          badge: "Modul Ajar / RPP • Siklus 2",
+          body: `
+                    <p class="text-xs text-slate-600 mb-4"><strong>Sekolah:</strong> SMA Negeri 3 Yogyakarta | <strong>Kelas:</strong> X Fase E | <strong>Materi:</strong> Analisis Data & Otomasi Perkantoran</p>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-xs space-y-2 mb-4">
+                        <p><strong>Capaian Pembelajaran (CP):</strong> Peserta didik mampu memanfaatkan fungsi lanjut spreadsheet untuk mengolah dan menganalisis data secara sistematis.</p>
+                        <p><strong>Tujuan Pembelajaran:</strong></p>
+                        <ul class="list-disc pl-4 space-y-1">
+                            <li>Menggunakan fungsi pembersihan data (PROPER, TRIM) dengan akurasi 100%.</li>
+                            <li>Menerapkan kombinasi Lookup (VLOOKUP, HLOOKUP) dan fungsi Logika IF Berjenjang untuk kasus studi nyata.</li>
+                        </ul>
+                    </div>
+                    <p class="text-xs text-slate-500 italic mb-4">*Catatan: Ganti Tautan Drive di bawah ini dengan tautan RPP PDF asli Anda.*</p>
+                    <a href="https://drive.google.com" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-sky-600 text-white rounded-xl text-xs font-semibold hover:bg-sky-700">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i> Buka Google Drive Document
+                    </a>
+                `,
+        },
+        "rubrik-visdata": {
+          title: "Rubrik Asesmen Visualisasi Data",
+          badge: "Instrumen Asesmen • Siklus 4",
+          body: `
+                    <p class="text-xs text-slate-600 mb-4"><strong>Metode Evaluasi:</strong> Penilaian Kinerja (Performance-Based Assessment)</p>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-xs space-y-2 mb-4">
+                        <p><strong>Kriteria Penilaian:</strong></p>
+                        <ul class="list-disc pl-4 space-y-1">
+                            <li>Kerapian & Pemilihan Jenis Grafik (Skor Max: 30)</li>
+                            <li>Ketepatan Interpretasi Data (Skor Max: 40)</li>
+                            <li>Kreativitas Desain Presentation Slide (Skor Max: 30)</li>
+                        </ul>
+                    </div>
+                    <a href="https://drive.google.com" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded-xl text-xs font-semibold hover:bg-purple-700">
+                        <i class="fa-solid fa-table"></i> Lihat Rubrik Lengkap
+                    </a>
+                `,
+        },
+        "video-ppl": {
+          title: "Rekaman Pelaksanaan Pembelajaran (PPL) Siklus 2",
+          badge: "Video Mengajar • 15 Menit",
+          body: `
+                    <p class="text-xs text-slate-600 mb-4">Video ini menampilkan proses pelaksanaan pembelajaran PPL Mandiri materi Excel Advanced di SMA N 3 Yogyakarta.</p>
+                    <div class="aspect-video bg-slate-900 rounded-xl overflow-hidden flex items-center justify-center text-white text-xs mb-4">
+                        <iframe class="w-full h-full" src="https://drive.google.com/file/d/1QG3rUt-0kKbKwRHeVTJ07eCcEqRtw974/preview" title="Video Pembelajaran PPL Siklus 2" frameborder="0" allow="autoplay" allowfullscreen></iframe>
+                    </div>
+                `,
+        },
+      };
+
+      const modalBackdrop = document.getElementById("modal-backdrop");
+      const modalContent = document.getElementById("modal-content");
+
+      function openModal(key) {
+        const data = modalDetails[key];
+        if (!data) return;
+
+        modalContent.innerHTML = `
+                <span class="inline-block px-2.5 py-1 rounded-md bg-sky-100 text-sky-800 text-xs font-bold mb-2">${data.badge}</span>
+                <h3 class="text-xl font-bold text-slate-900 mb-4">${data.title}</h3>
+                <div>${data.body}</div>
+            `;
+        modalBackdrop.classList.remove("hidden");
+      }
+
+      function closeModal() {
+        modalBackdrop.classList.add("hidden");
+      }
+
+      // Close Modal when clicking outside box
+      modalBackdrop.addEventListener("click", (e) => {
+        if (e.target === modalBackdrop) closeModal();
+      });
+    </script>
+  </body>
+</html>
